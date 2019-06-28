@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 var connection;
 
-if (proccess.env.JAWSDB_URL){
+if (process.env.JAWSDB_URL){
     connection = mysql.createConnection(proccess.env.JAWSDB_URL);
 } else{
     connection = mysql.createConnection({
@@ -15,7 +15,7 @@ if (proccess.env.JAWSDB_URL){
 
 connection.connect(function (err) {
     if (err){
-        console.error('Error connectiong: ' + err.stack);
+        console.error('Error connecting: ' + err.stack);
         return;
     }
     console.log('Connected as id: ' + connection.threadId);
