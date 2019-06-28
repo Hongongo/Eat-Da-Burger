@@ -18,6 +18,7 @@ var orm = {
         });
     },
     updateOne: function (tableInput, updateColumnName, updateRowVal, searchColumnName, searchRowVal, cb) {
+        console.log('****** ORM update ******');
         var queryString = 'UPDATE ?? SET ?? = ? WHERE ?? = ?';
         connection.query(queryString, [tableInput, updateColumnName, updateRowVal, searchColumnName, searchRowVal],
             function (err, res) {

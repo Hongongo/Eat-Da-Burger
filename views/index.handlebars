@@ -1,0 +1,38 @@
+<div class="row justify-content-around">
+    <div class="col-12 col-md-12 col-lg-5 p-4 my-4 food-container rounded">
+        <h2>Available Burgers</h2>
+        <hr>
+        {{#each burgers}}
+            {{#unless this.devoured}}
+                <div>
+                    <p>{{burger_name}}
+                        <button class="eat-btn btn btn-rounded" data-id="{{id}}">Eat burger</button></p>
+                </div>
+            {{/unless}}
+        {{/each}}
+    </div>
+    <div class="col-12 col-md-12 col-lg-5 p-4 my-4 food-container rounded">
+        <h2>Devoured Burgers</h2>
+        <hr>
+        {{#each burgers}}
+            {{#if this.devoured}}
+                <p>{{burger_name}}</p>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
+
+<div class="row row-centered">
+    <div class="col-12 col-md-12 col-lg-12 p-4 my-4 col-centered rounded">
+        <h2>Create a Burger</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <input type="text" id="burger" name="name">
+            </div>
+
+            <button type="submit" class="submit-btn btn blue-gradient btn-rounded">Add Burger</button>
+        </form>
+
+    </div>
+</div>

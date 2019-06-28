@@ -1,0 +1,52 @@
+body{
+    background-image: url("../images/burgerbg.jpg");
+}
+
+p, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color:black;
+    text-shadow: 2px 2px 3px #0000007e;
+}
+
+.eat-btn, .submit-btn{
+    font-size: 20px !important;
+    padding: 5px 30px 5px 30px !important;
+    border-radius: 20px !important;
+    font-weight: 800 !important;
+    color:black !important;
+    text-shadow: 2px 2px 3px #00000033;
+}
+
+h2{
+    font-weight: 800;
+}
+
+.food-container{
+    background-color: yellow;
+}
+
+#burger{
+    width:50%;
+}
+
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+    text-align: center;
+}
